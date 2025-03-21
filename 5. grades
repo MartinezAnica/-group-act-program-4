@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double grade, total = 0;
+    
+    for (int i = 1; i <= 4; i++) {
+        do {
+            cout << "Enter grade " << i << " (0-100): ";
+            cin >> grade;
+        } while (grade < 0 || grade > 100); // Repeat if input is invalid
+
+        total += grade;
+    }
+
+    cout << "Average grade: " << total / 4 << endl;
+
+    return 0;
+}
